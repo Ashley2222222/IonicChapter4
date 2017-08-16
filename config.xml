@@ -7,7 +7,7 @@
   <author email="hi@ionicframework" href="http://ionicframework.com/">&#xD;
       Ionic Framework Team&#xD;
     </author>
-  <content src="http://192.168.22.68:8100" original-src="index.html"/>
+  <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
