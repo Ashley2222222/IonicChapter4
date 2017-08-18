@@ -19,6 +19,10 @@ angular.module('App', ['ionic'])
   }).state('tour',{
     url:'/tour',
     templateUrl:'views/tour/tour.html'
+  }).state('help',{
+    url:'/help',
+      controller:'HelpController',
+    templateUrl:'views/help/help.html'
   });
   $urlRouterProvider.otherwise('/tour');
 })
