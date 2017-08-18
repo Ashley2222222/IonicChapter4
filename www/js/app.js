@@ -12,8 +12,15 @@ angular.module('App', ['ionic'])
     url:'/weather',
     controller:'WeatherController',
     templateUrl:'views/weather/weather.html'
+  }).state('restaurants',{
+    url:'/restaurants',
+    controller:'RestaurantsController',
+    templateUrl:'views/restaurants/restaurants.html'
+  }).state('tour',{
+    url:'/tour',
+    templateUrl:'views/tour/tour.html'
   });
-	$urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/tour');
 })
 
 .run(function($ionicPlatform) {
