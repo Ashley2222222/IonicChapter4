@@ -8,7 +8,11 @@
       <div class="item">Humidity:{{weather.main.humidity}}%</div>
 		<div class="item">Today's High:{{weather.main.temp_max}}&deg;</div>
 		<div class="item">Today's Low:{{weather.main.temp_min}}&deg;</div>
-		<div class="item">Wind:{{weather.wind.speed}}mph,{{getDirection(weather.wind.deg)}}</div>
+   <div class="item">Wind:{{weather.wind.speed}}mph,{{getDirection(weather.wind.deg)}}</div>
+
+        <div class="item">WindSpeed:{{weather.wind.speed}}mph</div>
+         <div class="item">WindDirection:{{weather.wind.deg|dir}}</div> 
+
     </div>
       
   </ion-content>

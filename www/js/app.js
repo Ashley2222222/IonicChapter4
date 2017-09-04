@@ -9,6 +9,7 @@ angular.module('App', ['ionic'])
     controller:'ReservationController',
     templateUrl:'views/reservation/reservation.html'
   }).state('weather',{
+    cache:true,
     url:'/weather',
     controller:'WeatherController',
     templateUrl:'views/weather/weather.html'
