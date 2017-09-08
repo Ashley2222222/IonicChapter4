@@ -18,7 +18,7 @@ angular.module('App')
 		});
 		return null;
 	}); 
-	return null;
+return null;
 })
 .controller('WeatherController',function($scope,$ionicLoading,$http,weatherService
 	){
