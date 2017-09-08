@@ -4,12 +4,12 @@ angular.module('App')
 .factory('weatherService',function($http,$ionicLoading){	
 	$http.get('https://ionic-in-action-api.herokuapp.com/weather')
 	.success(function(weather){
-		
-		localStorage.setItem("weather",JSON.stringify(weather));
+		localStorage.setItem("weather",JSON.stringify(weather));//缓存数据
+var weatherback = weather;
 		var newTime =  new Date().getTime();
 		localStorage.setItem("time",newTime);
 		$ionicLoading.hide();
-		return weather;
+		return weatherback;
 	})
 	.error(function(err){
 		$ionicLoading.show({
@@ -18,7 +18,7 @@ angular.module('App')
 		});
 		return null;
 	}); 
-return null;
+	return null;
 })
 .controller('WeatherController',function($scope,$ionicLoading,$http,weatherService
 	){
@@ -30,11 +30,12 @@ var timeSavedObj = JSON.parse(timeSaved);
 
 $scope.timeSaved =timeSaved;
 var newTime =  new Date().getTime();
-
-if(newTime-timeSavedObj>60*1000){//1min刷新一次
+$scope.weather;
+if(newTime-timeSavedObj>30*1000){//10s刷新一次
   console.log('new');
 $ionicLoading.show();
-	$scope.weather =weatherService($http,$ionicLoading);
+$scope.weather =weatherService($http,$ionicLoading);
+
 }else{
 	$scope.weather = JSON.parse(localStorage.getItem('weather'));
 	  console.log('old');
