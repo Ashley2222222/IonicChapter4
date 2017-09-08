@@ -37,4 +37,5 @@ angular.module('App', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-});
+})
+;
