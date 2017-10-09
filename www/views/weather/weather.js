@@ -1,7 +1,7 @@
 
 angular.module('App')
 
-//新读取的天气信息不能返回！！！！
+//新读取的天气信息
 .service('weatherService',function($http,$ionicLoading){	
 		$http.get('https://ionic-in-action-api.herokuapp.com/weather')
 	.success(function(weather){
