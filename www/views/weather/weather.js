@@ -8,7 +8,6 @@ angular.module('App')
 		localStorage.setItem("weatherBack",JSON.stringify(weather));//缓存数据
 		var newTime =  new Date().getTime();
 		localStorage.setItem("time",newTime);
-		var weatherNew = JSON.stringify(weather);
 		$ionicLoading.hide();
 	})
 	.error(function(err){
